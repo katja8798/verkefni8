@@ -42,6 +42,13 @@ const text = (() => {
       input.setAttribute('class', 'item__checkbox');
       input.setAttribute('type', 'checkbox');
       lina.appendChild(input);
+
+      const span = document.createElement('span');
+      span.setAttribute('class', 'item__text');
+      span.appendChild(spantxt);
+      lina.appendChild(span);
+
+
     }
   }
 
