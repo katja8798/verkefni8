@@ -36,8 +36,12 @@ const text = (() => {
       const element = document.getElementsByClassName("items")[0];
       const lina = document.createElement("li");
       lina.setAttribute("class", "item");
-      element.appendChild(line);
+      element.appendChild(lina);
 
+      const input = document.createElement('input');
+      input.setAttribute('class', 'item__checkbox');
+      input.setAttribute('type', 'checkbox');
+      lina.appendChild(input);
     }
   }
 
