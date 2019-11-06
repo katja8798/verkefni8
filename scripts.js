@@ -15,6 +15,13 @@ const text = (() => {
     _form.addEventListener('submit', formHandler);
 
     // TODO láta hluti í _items virka
+    _items.addEventListener('click', (e)=> {
+      finish(e);
+      edit(e);
+      commit(e);
+      add(e);
+      deleteItem(e);
+    })
   }
 
   function formHandler(e) {
@@ -25,22 +32,27 @@ const text = (() => {
 
   // event handler fyrir það að klára færslu
   function finish(e) {
+
   }
 
   // event handler fyrir það að breyta færslu
   function edit(e) {
+
   }
 
   // event handler fyrir það að klára að breyta færslu
   function commit(e) {
+
   }
 
   // fall sem sér um að bæta við nýju item
   function add(value) {
+
   }
 
   // event handler til að eyða færslu
   function deleteItem(e) {
+
   }
 
   // hjálparfall til að útbúa element
