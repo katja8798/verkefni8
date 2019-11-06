@@ -43,6 +43,12 @@ const text = (() => {
       input.setAttribute('type', 'checkbox');
       lina.appendChild(input);
 
+      const button = document.createElement('button');
+      const buttontxt = document.createTextNode('Eyða');
+      button.setAttribute('class', 'item__button');
+      button.appendChild(buttontxt);
+      lina.appendChild(button);
+
       const span = document.createElement('span');
       span.setAttribute('class', 'item__text');
       span.appendChild(spantxt);
