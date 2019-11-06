@@ -25,9 +25,20 @@ const text = (() => {
   }
 
   function formHandler(e) {
-    e.preventDefault();
+    /* e.preventDefault();
 
-    console.log('halló heimur');
+    console.log('halló heimur');*/
+
+    e.preventDefault();
+    const spantxt = document.createTextNode(add());
+
+    if (spantxt.length > 0){
+      const element = document.getElementsByClassName("items")[0];
+      const lina = document.createElement("li");
+      lina.setAttribute("class", "item");
+      element.appendChild(line);
+
+    }
   }
 
   // event handler fyrir það að klára færslu
