@@ -25,18 +25,14 @@ const text = (() => {
   }
 
   function formHandler(e) {
-    /* e.preventDefault();
-
-    console.log('halló heimur');*/
-
     e.preventDefault();
     const spantxt = document.createTextNode(add());
 
     if (spantxt.length > 0){
-      const element = document.getElementsByClassName("items")[0];
+      const el = document.getElementsByClassName("items")[0];
       const lina = document.createElement("li");
       lina.setAttribute("class", "item");
-      element.appendChild(lina);
+      el.appendChild(lina);
 
       const input = document.createElement('input');
       input.setAttribute('class', 'item__checkbox');
@@ -54,6 +50,7 @@ const text = (() => {
       button.appendChild(buttontxt);
       lina.appendChild(button);
     }
+    document.querySelector(".form__input").value="";
   }
 
   // event handler fyrir það að klára færslu
@@ -66,7 +63,6 @@ const text = (() => {
 
   // event handler fyrir það að breyta færslu
   function edit(e) {
-
   }
 
   // event handler fyrir það að klára að breyta færslu
@@ -76,7 +72,9 @@ const text = (() => {
 
   // fall sem sér um að bæta við nýju item
   function add(value) {
-
+    const txt = document.querySelector(".form__input").value;
+    const nyrInputTxt = txt.trim();
+    return nyrInputTxt;
   }
 
   // event handler til að eyða færslu
