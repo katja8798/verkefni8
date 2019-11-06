@@ -32,8 +32,11 @@ const text = (() => {
 
   // event handler fyrir það að klára færslu
   function finish(e) {
-
+    if (e.target.classList.contains("item__checkbox")) {
+      e.target.parentNode.classList.toggle("item--done");
+    }
   }
+  
 
   // event handler fyrir það að breyta færslu
   function edit(e) {
