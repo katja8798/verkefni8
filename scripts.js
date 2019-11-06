@@ -52,7 +52,9 @@ const text = (() => {
 
   // event handler til að eyða færslu
   function deleteItem(e) {
-
+    if (e.target.classList.contains("item__button")) {
+      e.target.parentNode.remove();
+    }
   }
 
   // hjálparfall til að útbúa element
