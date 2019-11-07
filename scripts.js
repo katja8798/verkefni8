@@ -63,6 +63,15 @@ const text = (() => {
 
   // event handler fyrir það að breyta færslu
   function edit(e) {
+    if (e.target.className === "item__text") {
+      const txt = e.target.textContent;
+      const txtinput = document.createElement("input");
+      txtinput.focus();
+      txtinput.classList.add("item__edit");
+      txtinput.setAttribute("type", "text");
+      txtinput.value = txt;
+      e.target.parentNode.replaceChild(txtinput, e.target);
+    }
   }
 
   // event handler fyrir það að klára að breyta færslu
