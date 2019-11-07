@@ -22,6 +22,7 @@ const text = (() => {
       add(e);
       deleteItem(e);
     })
+    _items.addEventListener('keyup', commit);
   }
 
   function formHandler(e) {
@@ -76,7 +77,13 @@ const text = (() => {
 
   // event handler fyrir það að klára að breyta færslu
   function commit(e) {
-
+    if ((e.target.className === "item__edit") && ((e.keyCode === ENTER_KEYCODE))) {
+      const nytt = e.target.value;
+      const nyttS = document.createElement("span");
+      nyttS.classList.add("item__text");
+      nyttS.textContent = nytt;
+      e.target.parentNode.replaceChild(nyttS, e.target);
+    }
   }
 
   // fall sem sér um að bæta við nýju item
